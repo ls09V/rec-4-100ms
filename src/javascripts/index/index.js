@@ -41,12 +41,12 @@ function attachClickHandler() {
 
   $('#name').val('Custom Beam');
   $('.hms-ui-c-jxehuX.hms-ui-c-jxehuX-gbvAgY-variant-primary').trigger('click');
-  $('.hms-ui-c-dhzjXW[data-aria-hidden="true"]').hide();
+  // $('.hms-ui-c-dhzjXW[data-aria-hidden="true"]').hide();
+  $('.hms-ui-c-jxehuX').click();
 }
 
 // Initial call to attach the click handler
 attachClickHandler();
-
 // Observe changes to the DOM
 const observer = new MutationObserver(attachClickHandler);
 observer.observe(document.body, {
