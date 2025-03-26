@@ -5,7 +5,7 @@ const copy = require('copy');
 
 const distPath = 'dist';
 
-const destPath = '../guvi3.0-dev';
+const destPath = '../rec';
 
 const exitError = () => {
   process.exit(1);
