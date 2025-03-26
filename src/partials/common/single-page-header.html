@@ -1,0 +1,50 @@
+<header class="bg-white w-100 ml-0 row">
+    <nav class="col navbar navbar-expand-md navbar-light shadow-sm">
+        <a class="navbar-brand" href="#">
+            <picture>
+              <source
+                srcset="images/resized/guvi-logo-100w.webp"
+                type="image/webp"
+              >
+              <img
+                src="images/resized/guvi-logo-100w.png"
+                alt="GUVI Logo"
+              >
+            </picture>
+          </a>
+        <!-- AccountGroup -->
+        <div class="list-group list-group-horizontal-md user-profile" id="accountGroup">
+            
+          <button class="btn dropdown notification-box-toggler  " data-toggle="collapse" data-target="#notification-box">
+            <i class="material-icons">notifications</i>
+          </button>
+          <button class="btn dropdown account-box-toggler" type="button" data-toggle="collapse" data-target="#account-box" aria-expanded="false" aria-controls="account-box">
+            <div class="gravatar-wrap">
+              <img src="images/common/profile-pic-sample.jpeg" class="gravatar" alt="username">
+            </div>
+          </button>
+          <div class="accordion-group">
+            <!-- NotificationBox -->
+            <div class="collapse notification-box" id="notification-box" data-parent="#accountGroup">
+              <div class="card card-body">
+                <ul class="list-group">
+                  No notifications
+                </ul>
+              </div>
+            </div>
+            <!-- /NotificationBox -->
+            <!-- AccountBox -->
+            <div class="collapse account-box" id="account-box" data-parent="#accountGroup">
+              <div class="card card-body">
+              </div>
+              <!-- /UserAccount information -->
+              <!-- ScoreCard -->
+              <!-- /ScoreCard -->
+            </div>
+          </div>
+          <!-- /AccountBox -->
+        </div>
+      </div>
+      <!-- /AccountGroup -->
+    </nav>
+</header>
