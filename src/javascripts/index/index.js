@@ -15,18 +15,32 @@ import { HMSPrebuilt } from '@100mslive/roomkit-react';
 
 function attachClickHandler() {
   // Remove header and toolbar
-  $('[data-testid="header"], [data-testid="footer"], [data-testid="participant_video_tile"], [data-testid="control_bar"]').remove();
+  $('[data-testid="header"], [data-testid="footer"], [data-testid="raiseHand_icon_onTile"], [data-testid="participant_audio_mute_icon"], [data-testid="control_bar"]').css('display', 'none');
 
-  // Remove chat, participant list, settings, and other panels
-  $('[data-testid="chat"], [data-testid="participants_list"], [data-testid="settings"]').remove();
+  // Hide chat, participant list, settings, and other panels
+  $('[data-testid="chat"], [data-testid="participants_list"], [data-testid="settings"]').css('display', 'none');
 
-  // Remove extra overlays
-  $('[data-testid="preview_screen"], [data-testid="leave_modal"], [data-testid="end_stream_modal"]').remove();
+  // Hide extra overlays
+  $('[data-testid="preview_screen"], [data-testid="leave_modal"], [data-testid="end_stream_modal"]').css('display', 'none');
 
-  $('.hms-ui-c-PJLV.hms-ui-c-PJLV-ifMLkGL-css.react-draggable', '.hms-ui-c-PJLV.hms-ui-c-PJLV-ikDFfxH-css').remove();
+  // Hide draggable elements
+  $('.hms-ui-c-cRMLUG.hms-ui-c-cRMLUG-ikXnX.GI-css, .hms-ui-c-PJLV.hms-ui-c-PJLV-ikDFfxH-css').css('display', 'none');
+
+  // $('[data-testid="header"], [data-testid="footer"],[data-testid="raiseHand_icon_onTile"],[data-testid="participant_audio_mute_icon"], [data-testid="control_bar"]').remove();
+
+  // // Remove chat, participant list, settings, and other panels
+  // $('[data-testid="chat"], [data-testid="participants_list"], [data-testid="settings"]').remove();
+
+  // // Remove extra overlays
+  // $('[data-testid="preview_screen"], [data-testid="leave_modal"], [data-testid="end_stream_modal"]').remove();
+
+  // $('.hms-ui-c-PJLV.hms-ui-c-PJLV-ifMLkGL-css.react-draggable', '.hms-ui-c-PJLV.hms-ui-c-PJLV-ikDFfxH-css').remove();
 
   // Keep only participant tiles and screenshare
   $('[data-testid="participant_tile"], [data-testid="screenshare_tile"]').show();
+
+  $('#name').val('Custom Beam');
+  $('.hms-ui-c-jxehuX.hms-ui-c-jxehuX-gbvAgY-variant-primary').trigger('click');
 }
 
 // Initial call to attach the click handler
