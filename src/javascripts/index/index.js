@@ -41,6 +41,7 @@ function attachClickHandler() {
 
   $('#name').val('Custom Beam');
   $('.hms-ui-c-jxehuX.hms-ui-c-jxehuX-gbvAgY-variant-primary').trigger('click');
+  $('.hms-ui-c-dhzjXW[data-aria-hidden="true"]').hide();
 }
 
 // Initial call to attach the click handler
@@ -53,7 +54,7 @@ observer.observe(document.body, {
   subtree: true,
 });
 $(document).ready(() => {
-  const codee = 'ecs-zhxk-sjx';
+  const codee = 'gyf-aupc-hjj';
   const options = {
     userName: 'Custom_Beam',
     userId: '1234',
