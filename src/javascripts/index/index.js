@@ -13,6 +13,20 @@ import ReactDOM from 'react-dom/client';
 // eslint-disable-next-line no-unused-vars
 import { HMSPrebuilt } from '@100mslive/roomkit-react';
 
+const getQueryStringVal = (sParam) => {
+  const sPageURL = decodeURIComponent(window.location.search.substring(1));
+  const sURLVariables = sPageURL.split('&');
+  let sParameterName;
+  let i;
+  for (i = 0; i < sURLVariables.length; i += 1) {
+    sParameterName = sURLVariables[i].split('=');
+    if (sParameterName[0] === sParam) {
+      return sParameterName[1] === undefined ? true : sParameterName[1];
+    }
+  }
+  return false;
+};
+
 function attachClickHandler() {
   // Remove header and toolbar
   $('[data-testid="header"], [data-testid="footer"], [data-testid="raiseHand_icon_onTile"], [data-testid="participant_audio_mute_icon"], [data-testid="control_bar"]').css('display', 'none');
@@ -41,8 +55,8 @@ function attachClickHandler() {
 
   $('#name').val('Custom Beam');
   $('.hms-ui-c-jxehuX.hms-ui-c-jxehuX-gbvAgY-variant-primary').trigger('click');
-  // $('.hms-ui-c-dhzjXW[data-aria-hidden="true"]').hide();
   $('.hms-ui-c-jxehuX').click();
+  $('.hms-ui-c-gwgzzg,.hms-ui-c-kuprMu.hms-ui-c-kuprMu-ifDrUlw-css').css('display', 'none');
 }
 
 // Initial call to attach the click handler
@@ -53,8 +67,10 @@ observer.observe(document.body, {
   childList: true,
   subtree: true,
 });
+
 $(document).ready(() => {
-  const codee = 'gyf-aupc-hjj';
+  const codee = getQueryStringVal('roomCode');
+  console.log('roomcoe is ', codee);
   const options = {
     userName: 'Custom_Beam',
     userId: '1234',
