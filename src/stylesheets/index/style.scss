@@ -27,6 +27,11 @@
   display: none !important;
 }
 
+// hide emoji reactions send by others
+.hms-ui-c-PJLV.hms-ui-c-PJLV-ihSvdNI-css {
+  display: none !important;
+}
+
 #conferencing {
   padding: 0 !important;
 }
@@ -35,4 +40,8 @@
   .hms-ui-c-PJLV.hms-ui-c-PJLV-iekfiqE-css {
     display: none !important;
   }
+}
+
+body {
+  margin: 0 !important;
 }
